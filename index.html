@@ -5,10 +5,18 @@
     	<link rel="stylesheet" type="text/css" href="index.css" media="screen" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>LRO</title>
+                <script type="text/javascript">
+        	function validar(f){
+        		Username = f.elements["username"].value;
+        		Passwor = f.elements["password"].value;
+        		alert(Passwor);
+        		return false;
+        	}
+        </script>
     </head>
     <body>
         <h1>Formulario Practica 1 lro</h1>
-        <form id="register" action="url">
+        <form id="register" action="" onsubmit="return validar(this)">
         	Username:	<input id="username" name="username" type="text" /><br />
 			Password:	<input id="password" name="password" type="password" /><br />        	
 			Retype
@@ -20,9 +28,10 @@
         	Gender:<br/><input id="genderf" name="gender" type="radio" value="Female" />Female<br/>
         				<input id="genderm" name="gender" type="radio" value="Male" />Male<br/>
         				<input id="maillist" name="maillist" type="checkbox" value="maillist_acepted" />
-        				Deseo recibir correos de esta p√°gina.<br />
+        				Deseo recibir correos de esta p·gina.<br />
         				<input id="terms" name="terms" type="checkbox" value="terms_acepted" />
         				Acepto los terminos y condiciones de uso.<br />
+        				<button id="send" onclick="onsubmit">Send</button>
         </form>
-    </body>
+	</body>
 </html>

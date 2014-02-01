@@ -1,20 +1,20 @@
 body
 {
-background-color:#101010;
+	background-color:#101010;
 }
 h1
 {
-color:green;
-text-align:center;
+	color:green;
+	text-align:center;
 }
 form
 {
-font-family:"Arial";
-font-size:22px;
-color:#efefef;
-text-align:left;
-width:500px;
-padding:10px;
-border:7px solid gray;
-margin:10px;
+	font-family:"Arial";
+	font-size:22px;
+	color:#efefef;
+	text-align:center;
+}
+button
+{
+	margin: 0 auto;
 }
