@@ -2,92 +2,15 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-    	<link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+    	<link rel="stylesheet" type="text/css" href="p1.css" media="screen" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>LRO</title>
-        <script type="text/javascript">
-        	function validar(f){
-        		Username = f.elements["username"].value;
-        		Password = f.elements["password"].value;
-        		PasswordCheck = f.elements["passwordcheck"].value;
-        		Email = f.elements["mail"].value;
-        		Name = f.elements["name"].value;
-        		Lastname = f.elements["lastname"].value;
-        		Birthday = f.elements["birthday"].value;
-        		Birthmonth = f.elements["birthmonth"].value;
-        		Birthyear = f.elements["birthyear"].value;
-        		Gender = f.elements["gender"].value;
-        		Maillist = f.elements["maillist"].checked;
-        		Terms = f.elements["terms"].checked;
-        		if(!(Password==null || Password=="") || !(Username==null || Username=="")){
-        			if(Username==null || Username==""){
-        				alert("Username field is empty!");
-	        			return false;
-        			}
-        			passw =  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-					if(!Password.match(passw)){
-						alert('Password must have between 7-15 characters and at least one digit and one special character lique / or &');
-						return false;
-					}
-					else if(Password!=PasswordCheck){
-						alert('Passwords don\'t match');
-						return false;
-					}
-				}
-				if(!(Email==null || Email=="")){
-					atpos=Email.indexOf("@");
-					dotpos=Email.lastIndexOf(".");
-					if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
-  						alert("Not a valid e-mail address");
-  						return false;
-  					}
-  				}
-  				switch(Birthmonth){
-  				    case "April" || "June" || "September" || "November":
-  				    	if (Birthday=="31") {
-  				    		alert("invalid date");
-  				    		return false;
-  				    	}
-  				    break;
-  				    case "February":
-  				    	if (Birthday=="31" || Birthday=="30") {
-  				    		alert("invalid date");
-  				    		return false;
-  				    		}
-  				    	else if(Birthday=="29"){
-  				    		year=parseInt(Birthyear);
-  				    		if (!((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0)))) alert("invalid date"); 
-  				    		return false;
-  				    	}
-  				    break;
-  				}
-  				if(!(Password==null || Password=="") || !(Username==null || Username=="")){
-  					if(Terms==false) alert("You have to accept our Terms & Conditions");
-  					return false;
-  				}
-        		return true;
-        	}
-        	function ChangeMethod(){
-        		form=document.getElementById("register");
-        		if(form.method=="post") form.method="get";
-        		else form.method="post";
-        	}
-        	function ChangeEncType(){
-        		form=document.getElementById("register");
-        		if(form.enctype=="application/x-www-form-urlencoded") form.enctype="multipart/form-data";
-        		else form.enctype="application/x-www-form-urlencoded";
-        	}
-        	function ChangeAction(){
-        		alert("action");
-        		form=document.getElementById("register");
-        		if(form.action=="p1.php") form.action="http://clave.det.uvigo.es:8080/~lroprof/p1.php";
-        		else form.action="p1.php";
-        	}
-        </script>
+        <script src="p1.js" type="text/javascript"></script>
     </head>
     <body>
         <h1>Formulario Practica 1 lro</h1>
-        <form id="register" method="post" enctype="application/x-www-form-urlencoded" action="p1.php" onsubmit="return validar(this)">
+        <form id="register" method="post" enctype="application/x-www-form-urlencoded" action="" onsubmit="return validar(this)">
+        				<input id="browser" name="browser" type="hidden" value="" />
         	Username:	<input id="username" name="username" type="text" /><br />
 			Password:	<input id="password" name="password" type="password" /><br />        	
 			Retype
