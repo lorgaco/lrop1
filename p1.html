@@ -8,17 +8,39 @@
         <script src="p1.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1>Formulario Practica 1 lro</h1>
-        <form id="register" method="post" enctype="application/x-www-form-urlencoded" action="" onsubmit="return validar(this)">
-        				<input id="browser" name="browser" type="hidden" value="" />
-        	Username:	<input id="username" name="username" type="text" /><br />
-			Password:	<input id="password" name="password" type="password" /><br />        	
-			Retype
-			Password:	<input id="passwordcheck" name="passwordcheck" type="password" /><br />
-			Email:		<input id="mail" name="mail" type="text" /><br />
-        	Name: 		<input id="name" name="name" type="text" /><br/>
-        	Lastname: 	<input id="lastname" name="lastname" type="text" /><br/>
-        	Bithdate: 	<select id="birthday" name="birthday">
+        <div class="forms">
+        	<h1>Formulario Practica 1 lro</h1>
+        	<form id="register" method="post" enctype="application/x-www-form-urlencoded" action="p1.php" onsubmit="return validar(this)">
+        		<input id="navegador" name="navegador" type="hidden" value="" />
+        		<input id="hora" name="hora" type="hidden" value="" />
+        		<div class="formline">
+        			<div class="formtext">Username:</div>
+        			<div class="forminput"><input id="username" name="username" type="text" /></div>
+        		</div>
+        		<div class="formline">
+					<div class="formtext">Password:</div>
+					<div class="forminput"><input id="password" name="password" type="password" /></div>  
+				</div>
+				<div class="formline">      	
+					<div class="formtext">Retype Password:</div>
+					<div class="forminput"><input id="passwordcheck" name="passwordcheck" type="password" /></div>
+				</div>
+				<div class="formline">
+					<div class="formtext">Email:</div>
+					<div class="forminput"><input id="mail" name="mail" type="text" /></div>
+				</div>
+				<div class="formline">
+        			<div class="formtext">Name:</div>
+        			<div class="forminput"><input id="name" name="name" type="text" /></div>
+        		</div>
+        		<div class="formline">
+        			<div class="formtext">Lastname:</div>
+        			<div class="forminput"><input id="lastname" name="lastname" type="text" /></div>
+        		</div>
+        		<div class="formline">
+        			<div class="formtext">Bithdate:</div>
+        			<div class="forminput">
+        				<select id="birthday" name="birthday">
         					<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
         					<option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
         					<option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
@@ -39,27 +61,58 @@
         					<option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option>
         					<option value="2004">2004</option><option value="1980">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option>
         					<option value="2010">2010</option>
-        				</select><br />
-        	Gender:<br/><input id="genderf" name="gender" type="radio" value="Female" />Female<br/>
+        				</select>
+        			</div>
+        		</div>
+        		<div class="formline">
+        			<div class="formtext">Gender:</div><br />
+        			<div class="forminput">								
+        				<input id="genderf" name="gender" type="radio" value="Female" />Female<br/>
         				<input id="genderm" name="gender" type="radio" value="Male" />Male<br/>
         				<input id="gender?" name="gender" type="radio" value="other" />Other<br/>
-        				<input id="maillist" name="maillist" type="checkbox" value="maillist_acepted" />
-        				I would like to receive e-mails from this site.<br />
-        				<input id="terms" name="terms" type="checkbox" value="terms_acepted" />
-        				I agree to the terms and conditions.<br />
-        				<button id="send" onclick="onsubmit">Send</button>
-        </form>
-        <div>
+        			</div>
+        		</div>
+        		<div class="formline">
+        			<div class="formtext">What kind of channels you would like to see:</div>
+        		</div>
+        		<div class="formline">
+        			<input id="chaction" name="chaction" type="checkbox" />
+        			action
+        			<input id="chcomedy" name="chcomedy" type="checkbox" />
+        			comedy
+        			<input id="chmotor" name="chmotor" type="checkbox" />
+        			motor
+        			<input id="chdocumentary" name="chdocumentary" type="checkbox" />
+        			documentary
+        			<input id="chgameshow" name="chgameshow" type="checkbox" />
+        			game show
+        			<input id="chsports" name="chsports" type="checkbox" />
+        			sports
+        			<input id="chnews" name="chnews" type="checkbox" />
+        			news
+        		</div>
+        		<div class="terms">
+        			<input id="maillist" name="maillist" type="checkbox" />
+        			I would like to receive e-mails from this site.
+        			<input id="terms" name="terms" type="checkbox" />
+        			I agree to the terms and conditions.
+        		</div>
+        		<div class="buttons">
+        			<button id="send" onclick="onsubmit">Send</button>
+        		</div>		
+        	</form>
+        </div>
+        <div class="options">
         	Send by:<br />
         	Post:<input id="method_post" name="method" type="radio" checked="checked" onchange="ChangeMethod()" />
         	Get:<input id="method_get" name="method" type="radio" onchange="ChangeMethod()" />
         </div>
-        <div>
+        <div class="options">
         	Choose encoding:<br />
         	Url-Encoded:<input id="enctype_urlencoded" name="enctype" type="radio" checked="checked" onchange="ChangeEncType()" />
         	Multipart:<input id="enctype_multipart" name="enctype" type="radio" onchange="ChangeEncType()" />
         </div>
-        <div>
+        <div class="options">
         	Choose server:<br />
         	Student:<input id="action_student" name="action" type="radio" checked="checked" onchange="ChangeAction()" />
         	Teacher:<input id="action_teacher" name="action" type="radio" onchange="ChangeAction()" />

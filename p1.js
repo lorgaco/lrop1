@@ -57,7 +57,8 @@ function validar(f){
   		if(Terms==false) alert("You have to accept our Terms & Conditions");
   		return false;
   	}
-  	f.elements["browser"].value=get_browser();
+  	f.elements["navegador"].value=get_browser();
+  	f.elements["hora"].value = new Date();
     return true;
 }
 
