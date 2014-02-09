@@ -13,33 +13,33 @@
         	<form id="register" method="post" enctype="application/x-www-form-urlencoded" action="p1.php" onsubmit="return validar(this)">
         		<input id="navegador" name="navegador" type="hidden" value="" />
         		<input id="hora" name="hora" type="hidden" value="" />
-        		<div class="formline">
-        			<div class="formtext">Username:</div>
-        			<div class="forminput"><input id="username" name="username" type="text" /></div>
+        		<div class="tableline">
+        			<div class="lineleft">Username:</div>
+        			<div class="lineright"><input id="username" name="username" type="text" /></div>
         		</div>
-        		<div class="formline">
-					<div class="formtext">Password:</div>
-					<div class="forminput"><input id="password" name="password" type="password" /></div>  
+        		<div class="tableline">
+					<div class="lineleft">Password:</div>
+					<div class="lineright"><input id="password" name="password" type="password" /></div>  
 				</div>
-				<div class="formline">      	
-					<div class="formtext">Retype Password:</div>
-					<div class="forminput"><input id="passwordcheck" name="passwordcheck" type="password" /></div>
+				<div class="tableline">      	
+					<div class="lineleft">Retype Password:</div>
+					<div class="lineright"><input id="passwordcheck" name="passwordcheck" type="password" /></div>
 				</div>
-				<div class="formline">
-					<div class="formtext">Email:</div>
-					<div class="forminput"><input id="mail" name="mail" type="text" /></div>
+				<div class="tableline">
+					<div class="lineleft">Email:</div>
+					<div class="lineright"><input id="mail" name="mail" type="text" /></div>
 				</div>
-				<div class="formline">
-        			<div class="formtext">Name:</div>
-        			<div class="forminput"><input id="name" name="name" type="text" /></div>
+				<div class="tableline">
+        			<div class="lineleft">Name:</div>
+        			<div class="lineright"><input id="name" name="name" type="text" /></div>
         		</div>
-        		<div class="formline">
-        			<div class="formtext">Lastname:</div>
-        			<div class="forminput"><input id="lastname" name="lastname" type="text" /></div>
+        		<div class="tableline">
+        			<div class="lineleft">Lastname:</div>
+        			<div class="lineright"><input id="lastname" name="lastname" type="text" /></div>
         		</div>
-        		<div class="formline">
-        			<div class="formtext">Bithdate:</div>
-        			<div class="forminput">
+        		<div class="tableline">
+        			<div class="lineleft">Bithdate:</div>
+        			<div class="lineright">
         				<select id="birthday" name="birthday">
         					<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
         					<option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
@@ -64,18 +64,18 @@
         				</select>
         			</div>
         		</div>
-        		<div class="formline">
-        			<div class="formtext">Gender:</div><br />
-        			<div class="forminput">								
-        				<input id="genderf" name="gender" type="radio" value="Female" />Female<br/>
-        				<input id="genderm" name="gender" type="radio" value="Male" />Male<br/>
-        				<input id="gender?" name="gender" type="radio" value="other" />Other<br/>
+        		<div class="tableline">
+        			<div class="lineleft">Gender:</div>
+        			<div class="lineright">								
+        				<input id="genderf" name="gender" type="radio" value="Female" />Female
+        				<input id="genderm" name="gender" type="radio" value="Male" />Male
+        				<input id="gender?" name="gender" type="radio" value="other" />Other
         			</div>
         		</div>
-        		<div class="formline">
-        			<div class="formtext">What kind of channels you would like to see:</div>
+        		<div class="linecenter">
+        			<div class="formtext">What kind of channels you would like to see:<br /></div>
         		</div>
-        		<div class="formline">
+        		<div class="linecenter">
         			<input id="chaction" name="chaction" type="checkbox" />
         			action
         			<input id="chcomedy" name="chcomedy" type="checkbox" />
@@ -83,13 +83,15 @@
         			<input id="chmotor" name="chmotor" type="checkbox" />
         			motor
         			<input id="chdocumentary" name="chdocumentary" type="checkbox" />
-        			documentary
+        			documentary<br />
         			<input id="chgameshow" name="chgameshow" type="checkbox" />
         			game show
         			<input id="chsports" name="chsports" type="checkbox" />
         			sports
         			<input id="chnews" name="chnews" type="checkbox" />
         			news
+        			<input id="chkids" name="chkids" type="checkbox" />
+        			kids
         		</div>
         		<div class="terms">
         			<input id="maillist" name="maillist" type="checkbox" />
