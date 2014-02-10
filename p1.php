@@ -1,8 +1,8 @@
 <?php
-    $id = "Primer ejemplo en PHP";
+    $username = $_POST["username"];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <body>
-        <?php echo $id ?>
+        <?php echo $username ?>
     </body>
 </html>
