@@ -1,5 +1,4 @@
 function validar(f){
-	alert("1);
 	Username = f.elements["username"].value;
     Password = f.elements["password"].value;
     PasswordCheck = f.elements["passwordcheck"].value;
@@ -12,9 +11,7 @@ function validar(f){
     Gender = f.elements["gender"].value;
     Maillist = f.elements["maillist"].checked;
     Terms = f.elements["terms"].checked;
-    alert("2");
     if(!(Password==null || Password=="") || !(Username==null || Username=="")){
-    	alert("3");
     	if(Username==null || Username==""){
     		alert("Username field is empty!");
 			return false;
@@ -30,7 +27,6 @@ function validar(f){
 		}
 	}
 	if(!(Email==null || Email=="")){
-		alert("4");
 		atpos=Email.indexOf("@");
 		dotpos=Email.lastIndexOf(".");
 		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
@@ -40,14 +36,12 @@ function validar(f){
   	}
   	switch(Birthmonth){
   	    case "April" || "June" || "September" || "November":
-  	    	alert("5");
   	    	if (Birthday=="31") {
   	    		alert("invalid date");
   	    		return false;
   	    	}
   	    break;
   	    case "February":
-  	    	alert("6");
   	    	if (Birthday=="31" || Birthday=="30") {
   	    		alert("invalid date");
   	    		return false;
@@ -62,13 +56,13 @@ function validar(f){
   	    break;
   	}
   	if(!(Password==null || Password=="") || !(Username==null || Username=="")){
-  		alert("7");
-  		if(Terms==false) alert("You have to accept our Terms & Conditions");
-  		return false;
+  		if(Terms==false) {
+  			alert("You have to accept our Terms & Conditions");
+  			return false;
+  		}
   	}
   	f.elements["navegador"].value=get_browser();
   	f.elements["hora"].value = new Date();
-  	alert("jau");
     return true;
 }
 
