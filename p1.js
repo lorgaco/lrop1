@@ -61,8 +61,10 @@ function validar(f){
   			return false;
   		}
   	}
-  	f.elements["navegador"].value=get_browser();
+  	f.elements["navegador"].value = get_browser();
+  	alert(f.elements["navegador"].value);
   	f.elements["hora"].value = new Date();
+  	alert(f.elements["hora"].value);
     return true;
 }
 

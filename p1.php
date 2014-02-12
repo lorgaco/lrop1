@@ -82,7 +82,7 @@
             <div class="lineright"><?php echo $browser ?></div>
         </div>
         <div class="tableline">
-            <div class="lineleft">time:</div>
+            <div class="lineleft">Time:</div>
             <div class="lineright"><?php echo $time ?></div>
         </div>
         <?php echo $maillist ?>
