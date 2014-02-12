@@ -21,7 +21,11 @@
 	$chkids = $_POST["chkids"];
 	
 	$maillist = $_POST["maillist"];
+    if($maillist==on) $maillist = "yes";
+    else $maillist = "no";
 	$terms = $_POST["terms"];
+    if($terms==on) $terms = "yes";
+    else $terms = "no";
     
     $channels = "";
     if($chaction==on) $channels = $channels." "."action";
