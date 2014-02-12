@@ -62,9 +62,7 @@ function validar(f){
   		}
   	}
   	f.elements["navegador"].value = get_browser();
-  	alert(f.elements["navegador"].value);
   	f.elements["hora"].value = new Date();
-  	alert(f.elements["hora"].value);
     return true;
 }
 

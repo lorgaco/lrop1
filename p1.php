@@ -4,13 +4,13 @@
     
     $username = $_POST["username"];
 	$password = $_POST["password"];
-	$email = $_POST["email"];
+	$email = $_POST["mail"];
 	$name = $_POST["name"];
 	$lastname = $_POST["lastname"];
 	$birthday = $_POST["birthday"];
 	$birthmonth = $_POST["birthmonth"];
 	$birthyear = $_POST["birthyear"];
-	
+	$gender = $_POST["gender"];
 	$chaction = $_POST["chaction"];
 	$chcomedy = $_POST["chcomedy"];
 	$chmotor = $_POST["chmotor"];
@@ -65,6 +65,11 @@
             <div class="lineleft">birthdate:</div>
             <div class="lineright"><?php echo $birthday ?><?php echo $birthmonth ?><?php echo $birthyear ?></div>
         </div>
+        <div class="tableline">
+            <div class="lineleft">Gender:</div>
+            <div class="lineright"><?php echo $gender ?></div>
+        </div>
+        <div cl
         <div class="tableline">
             <div class="lineleft">Categories subscribed:</div>
             <div class="lineright"><?php echo $channels ?></div>
