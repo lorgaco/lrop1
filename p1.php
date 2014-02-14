@@ -1,8 +1,6 @@
 <?php
-    $browser_post = $_POST["navegador"];
-    $browser_get = $_REQUEST["navegador"];
-    if($browser_get==null || $browser_get==""){
-        $browser = $browser_post;
+    if(false){
+        $browser = $_REQUEST["navegador"];
         $time = $_POST["hora"];
         $username = $_POST["username"];
         $password = $_POST["password"];
@@ -25,7 +23,7 @@
         $terms = $_POST["terms"];
     }
     else{
-        $browser = $browser_get;
+        $browser = $_POST["navegador"];
         $time = $_REQUEST["hora"];
         $username = $_REQUEST["username"];
         $password = $_REQUEST["password"];
@@ -62,6 +60,15 @@
     if($chsports==on) $channels = $channels." "."sports";
     if($chnews==on) $channels = $channels." "."news";
     if($chkids==on) $channels = $channels." "."kids";
+    
+    //other values
+    $server = $_SERVER["HTTP_HOST"];
+    $referer = $_SERVER["HTTP_REFERER"];
+    $software = $_SERVER["SERVER_SOFTWARE"];
+    $remote = $_SERVER["REMOTE_ADDR"];
+    $method = $_SERVER["REQUEST_METHOD"];
+    $request_uri = $_SERVER["REQUEST_URI"];
+    $user_agent = $_SERVER["HTTP_USER_AGENT"];
 	
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -122,6 +129,37 @@
         <div class="tableline">
             <div class="lineleft">Time:</div>
             <div class="lineright"><?php echo $time ?></div>
+        </div>
+        <div class="tableline">
+            <div class="lineleft">Server values:</div>
+        </div>
+        <div class="tableline">
+            <div class="lineleft">Server:</div>
+            <div class="lineright"><?php echo $server ?></div>
+        </div>
+        <div class="tableline">
+            <div class="lineleft">Referer:</div>
+            <div class="lineright"><?php echo $referer ?></div>
+        </div>
+        <div class="tableline">
+            <div class="lineleft">Software:</div>
+            <div class="lineright"><?php echo $software ?></div>
+        </div>
+        <div class="tableline">
+            <div class="lineleft">Remote:</div>
+            <div class="lineright"><?php echo $remote ?></div>
+        </div>
+        <div class="tableline">
+            <div class="lineleft">Method:</div>
+            <div class="lineright"><?php echo $method ?></div>
+        </div>
+        <div class="tableline">
+            <div class="lineleft">Request URIi:</div>
+            <div class="lineright"><?php echo $request_uri ?></div>
+        </div>
+        <div class="tableline">
+            <div class="lineleft">User agent:</div>
+            <div class="lineright"><?php echo $user_agent ?></div>
         </div>
         <?php echo $maillist ?>
     </body>
