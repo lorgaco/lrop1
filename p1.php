@@ -1,7 +1,7 @@
 <?php
     $browser_post = $_POST["navegador"];
     $browser_get = $_REQUEST["navegador"];
-    if($browser_get==null || $browser_get=""){
+    if($browser_get==null || $browser_get==""){
         $browser = $browser_post;
         $time = $_POST["hora"];
         $username = $_POST["username"];
@@ -24,7 +24,7 @@
         $maillist = $_POST["maillist"];
         $terms = $_POST["terms"];
     }
-    else if($browser_post==null || $browser_post=""){
+    else if($browser_post==null || $browser_post==""){
         $browser = $browser_get;
         $time = $_REQUEST["hora"];
         $username = $_REQUEST["username"];
@@ -92,8 +92,8 @@
             <div class="lineright"><?php echo $lastname ?></div>
         </div>
         <div class="tableline">
-            <div class="lineleft">birthdate:</div>
-            <div class="lineright"><?php echo $birthday ?><?php echo $birthmonth ?><?php echo $birthyear ?></div>
+            <div class="lineleft">Birthdate:</div>
+            <div class="lineright"><?php echo $birthday ?> <?php echo $birthmonth ?> <?php echo $birthyear ?></div>
         </div>
         <div class="tableline">
             <div class="lineleft">Gender:</div>
