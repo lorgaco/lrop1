@@ -24,7 +24,7 @@
         $maillist = $_POST["maillist"];
         $terms = $_POST["terms"];
     }
-    else if($browser_post==null || $browser_post==""){
+    else{
         $browser = $browser_get;
         $time = $_REQUEST["hora"];
         $username = $_REQUEST["username"];
