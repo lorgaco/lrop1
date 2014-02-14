@@ -71,6 +71,9 @@
         <title>LRO</title>
     </head>
     <body>
+    <?php echo $browser_get ?>
+    <?php echo $browser_post ?>
+    <?php echo $browser ?>
         <div class="tableline">
             <div class="lineleft">Username:</div>
             <div class="lineright"><?php echo $username ?></div>
