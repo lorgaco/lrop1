@@ -68,22 +68,26 @@ function validar(f){
 
 function ChangeMethod(){
 	form=document.getElementById("register");
-	if(form.method=="post") form.method="get";
-	else form.method="post";
+	radio_post=document.getElementById("method_post").checked;
+	radio_get=document.getElementById("method_get").checked;
+	if(radio_get==true) form.method="get";
+	else if(radio_post==true) form.method="post";
 }
 
 function ChangeEncType(){
 	form=document.getElementById("register");
-    if(form.enctype=="application/x-www-form-urlencoded") form.enctype="multipart/form-data";
-    else form.enctype="application/x-www-form-urlencoded";
+	radio_url=document.getElementById("enctype_urlencoded").checked;
+	radio_multi=document.getElementById("enctype_multipart").checked;
+    if(radio_multi==true) form.enctype="multipart/form-data";
+    else if(radio_url==true) form.enctype="application/x-www-form-urlencoded";
 }
 
 function ChangeAction(){
 	form=document.getElementById("register");
-	alert(form.action);
-	document.getElementById("register").action="http://clave.det.uvigo.es:8080/~lroprof/p1.php";
-	if(form.action=="p1.php") ;
-    else form.action="p1.php";
+	radio_student=document.getElementById("action_student").checked;
+	radio_teacher=document.getElementById("action_teacher").checked;
+	if(radio_teacher==true)  form.action="/../../~lroprof/p1.php";
+    else if(radio_student==true) form.action="p1.php";
 }
 
 function get_browser(){
