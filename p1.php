@@ -1,50 +1,25 @@
 <?php
-    if(false){
-        $browser = $_REQUEST["navegador"];
-        $time = $_POST["hora"];
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        $email = $_POST["mail"];
-        $name = $_POST["name"];
-        $lastname = $_POST["lastname"];
-        $birthday = $_POST["birthday"];
-        $birthmonth = $_POST["birthmonth"];
-        $birthyear = $_POST["birthyear"];
-        $gender = $_POST["gender"];
-        $chaction = $_POST["chaction"];
-        $chcomedy = $_POST["chcomedy"];
-        $chmotor = $_POST["chmotor"];
-        $chdocumentary = $_POST["chdocumentary"];
-        $chgameshow = $_POST["chgameshow"];
-        $chsports = $_POST["chsports"];
-        $chnews = $_POST["chnews"];
-        $chkids = $_POST["chkids"];
-        $maillist = $_POST["maillist"];
-        $terms = $_POST["terms"];
-    }
-    else{
-        $browser = $_POST["navegador"];
-        $time = $_REQUEST["hora"];
-        $username = $_REQUEST["username"];
-        $password = $_REQUEST["password"];
-        $email = $_REQUEST["mail"];
-        $name = $_REQUEST["name"];
-        $lastname = $_REQUEST["lastname"];
-        $birthday = $_REQUEST["birthday"];
-        $birthmonth = $_REQUEST["birthmonth"];
-        $birthyear = $_REQUEST["birthyear"];
-        $gender = $_REQUEST["gender"];
-        $chaction = $_REQUEST["chaction"];
-        $chcomedy = $_REQUEST["chcomedy"];
-        $chmotor = $_REQUEST["chmotor"];
-        $chdocumentary = $_REQUEST["chdocumentary"];
-        $chgameshow = $_REQUEST["chgameshow"];
-        $chsports = $_REQUEST["chsports"];
-        $chnews = $_REQUEST["chnews"];
-        $chkids = $_REQUEST["chkids"];
-        $maillist = $_REQUEST["maillist"];
-        $terms = $_REQUEST["terms"];
-    }
+    $browser = $_POST["navegador"];
+    $time = $_REQUEST["hora"];
+    $username = $_REQUEST["username"];
+    $password = $_REQUEST["password"];
+    $email = $_REQUEST["mail"];
+    $name = $_REQUEST["name"];
+    $lastname = $_REQUEST["lastname"];
+    $birthday = $_REQUEST["birthday"];
+    $birthmonth = $_REQUEST["birthmonth"];
+    $birthyear = $_REQUEST["birthyear"];
+    $gender = $_REQUEST["gender"];
+    $chaction = $_REQUEST["chaction"];
+    $chcomedy = $_REQUEST["chcomedy"];
+    $chmotor = $_REQUEST["chmotor"];
+    $chdocumentary = $_REQUEST["chdocumentary"];
+    $chgameshow = $_REQUEST["chgameshow"];
+    $chsports = $_REQUEST["chsports"];
+    $chnews = $_REQUEST["chnews"];
+    $chkids = $_REQUEST["chkids"];
+    $maillist = $_REQUEST["maillist"];
+    $terms = $_REQUEST["terms"];
     
     if($maillist==on) $maillist = "yes";
     else $maillist = "no";
@@ -78,9 +53,6 @@
         <title>LRO</title>
     </head>
     <body>
-    get <?php echo $browser_get ?><br />
-    post <?php echo $browser_post ?><br />
-    final <?php echo $browser ?><br />
         <div class="tableline">
             <div class="lineleft">Username:</div>
             <div class="lineright"><?php echo $username ?></div>
@@ -130,8 +102,9 @@
             <div class="lineleft">Time:</div>
             <div class="lineright"><?php echo $time ?></div>
         </div>
+        <br />
         <div class="tableline">
-            <div class="lineleft">Server values:</div>
+            <div class="lineleft">Server values</div>
         </div>
         <div class="tableline">
             <div class="lineleft">Server:</div>
@@ -154,13 +127,12 @@
             <div class="lineright"><?php echo $method ?></div>
         </div>
         <div class="tableline">
-            <div class="lineleft">Request URIi:</div>
+            <div class="lineleft">Request URI:</div>
             <div class="lineright"><?php echo $request_uri ?></div>
         </div>
         <div class="tableline">
             <div class="lineleft">User agent:</div>
             <div class="lineright"><?php echo $user_agent ?></div>
         </div>
-        <?php echo $maillist ?>
     </body>
 </html>
