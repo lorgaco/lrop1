@@ -1,30 +1,56 @@
 <?php
-    $browser = $_POST["navegador"];
-    $time = $_POST["hora"];
+    $browser_post = $_POST["navegador"];
+    $browser_get = $_REQUEST["navegador"];
+    if($browser_get==null || $browser_get=""){
+        $browser = $browser_post;
+        $time = $_POST["hora"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $email = $_POST["mail"];
+        $name = $_POST["name"];
+        $lastname = $_POST["lastname"];
+        $birthday = $_POST["birthday"];
+        $birthmonth = $_POST["birthmonth"];
+        $birthyear = $_POST["birthyear"];
+        $gender = $_POST["gender"];
+        $chaction = $_POST["chaction"];
+        $chcomedy = $_POST["chcomedy"];
+        $chmotor = $_POST["chmotor"];
+        $chdocumentary = $_POST["chdocumentary"];
+        $chgameshow = $_POST["chgameshow"];
+        $chsports = $_POST["chsports"];
+        $chnews = $_POST["chnews"];
+        $chkids = $_POST["chkids"];
+        $maillist = $_POST["maillist"];
+        $terms = $_POST["terms"];
+    }
+    else if($browser_post==null || $browser_post=""){
+        $browser = $browser_get;
+        $time = $_REQUEST["hora"];
+        $username = $_REQUEST["username"];
+        $password = $_REQUEST["password"];
+        $email = $_REQUEST["mail"];
+        $name = $_REQUEST["name"];
+        $lastname = $_REQUEST["lastname"];
+        $birthday = $_REQUEST["birthday"];
+        $birthmonth = $_REQUEST["birthmonth"];
+        $birthyear = $_REQUEST["birthyear"];
+        $gender = $_REQUEST["gender"];
+        $chaction = $_REQUEST["chaction"];
+        $chcomedy = $_REQUEST["chcomedy"];
+        $chmotor = $_REQUEST["chmotor"];
+        $chdocumentary = $_REQUEST["chdocumentary"];
+        $chgameshow = $_REQUEST["chgameshow"];
+        $chsports = $_REQUEST["chsports"];
+        $chnews = $_REQUEST["chnews"];
+        $chkids = $_REQUEST["chkids"];
+        $maillist = $_REQUEST["maillist"];
+        $terms = $_REQUEST["terms"];
+    }
     
-    $username = $_POST["username"];
-	$password = $_POST["password"];
-	$email = $_POST["mail"];
-	$name = $_POST["name"];
-	$lastname = $_POST["lastname"];
-	$birthday = $_POST["birthday"];
-	$birthmonth = $_POST["birthmonth"];
-	$birthyear = $_POST["birthyear"];
-	$gender = $_POST["gender"];
-	$chaction = $_POST["chaction"];
-	$chcomedy = $_POST["chcomedy"];
-	$chmotor = $_POST["chmotor"];
-	$chdocumentary = $_POST["chdocumentary"];
-	$chgameshow = $_POST["chgameshow"];
-	$chsports = $_POST["chsports"];
-	$chnews = $_POST["chnews"];
-	$chkids = $_POST["chkids"];
-	
-	$maillist = $_POST["maillist"];
     if($maillist==on) $maillist = "yes";
     else $maillist = "no";
-	$terms = $_POST["terms"];
-    if($terms==on) $terms = "yes";
+        if($terms==on) $terms = "yes";
     else $terms = "no";
     
     $channels = "";
