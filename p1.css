@@ -28,7 +28,6 @@ h1
 	color:#efefef;
 	text-align: left;
 	width: 30%;
-    display: inline;
     float: left;
     margin-left: 20%;
     margin-right: 0%;
@@ -41,8 +40,19 @@ h1
 	font-size:21px;
 	color:#efefef;
 	width: 50%;
-    display: inline;
     float: right;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+.hint
+{
+	display:inline;
+	font-family:"Arial";
+	font-size:11px;
+	color:#ffa0a0;
+	width: 40%;
+    float: right;
+    text-align: left;
     margin-left: 0%;
     margin-right: 0%;
 }

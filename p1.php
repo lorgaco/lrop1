@@ -81,7 +81,6 @@
             <div class="lineleft">Gender:</div>
             <div class="lineright"><?php echo $gender ?></div>
         </div>
-        <div cl
         <div class="tableline">
             <div class="lineleft">Categories subscribed:</div>
             <div class="lineright"><?php echo $channels ?></div>
