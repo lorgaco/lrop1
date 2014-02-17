@@ -1,5 +1,5 @@
 <?php
-    $browser = $_POST["navegador"];
+    $browser = $_REQUEST["navegador"];
     $time = $_REQUEST["hora"];
     $username = $_REQUEST["username"];
     $password = $_REQUEST["password"];

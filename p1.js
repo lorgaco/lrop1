@@ -1,6 +1,6 @@
 function validar(f){
 	Username = f.elements["username"].value;
-    Password = f.elements["password"].value;
+    PasswordOri = f.elements["password"].value;
     PasswordCheck = f.elements["passwordcheck"].value;
     Email = f.elements["mail"].value;
     Name = f.elements["name"].value;
@@ -11,17 +11,17 @@ function validar(f){
     Gender = f.elements["gender"].value;
     Maillist = f.elements["maillist"].checked;
     Terms = f.elements["terms"].checked;
-    if(!(Password==null || Password=="") || !(Username==null || Username=="")){
+    if(!(PasswordOri==null || PasswordOri=="") || !(Username==null || Username=="")){
     	if(Username==null || Username==""){
     		alert("Username field is empty!");
 			return false;
     	}
     	passw =  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-		if(!Password.match(passw)){
+		if(!PasswordOri.match(passw)){
 			alert('Password must have between 7-15 characters and at least one digit and one special character lique / or &');
 			return false;
 		}
-		else if(Password!=PasswordCheck){
+		else if(PasswordOri=PasswordCheck){
 			alert('Passwords don\'t match');
 			return false;
 		}
@@ -29,7 +29,7 @@ function validar(f){
 	if(!(Email==null || Email=="")){
 		atpos=Email.indexOf("@");
 		dotpos=Email.lastIndexOf(".");
-		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=Email.length){
   			alert("Not a valid e-mail address");
   			return false;
   		}
