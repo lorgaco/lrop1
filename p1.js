@@ -21,7 +21,7 @@ function validar(f){
 			alert('Password must have between 7-15 characters and at least one digit and one special character lique / or &');
 			return false;
 		}
-		else if(PasswordOri=PasswordCheck){
+		else if(PasswordOri==PasswordCheck){
 			alert('Passwords don\'t match');
 			return false;
 		}
